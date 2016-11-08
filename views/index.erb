@@ -1,0 +1,89 @@
+<html>
+  <head><link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet"></head>
+  <style>
+  body {
+    background: rgba(212,228,239,1);
+    background: -moz-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(212,228,239,1)), color-stop(100%, rgba(134,174,204,1)));
+    background: -webkit-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+    background: -o-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+    background: -ms-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+    background: linear-gradient(to right, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc', GradientType=1 );
+
+    width: 99%;
+    font-family: 'Shrikhand', cursive;
+  }
+
+  #page-wrap {
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 10px 10px 34px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 34px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 34px 0px rgba(0,0,0,0.75);
+    border: 1px solid #240224;
+    background: #fff;
+    width: 60%;
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  h3, h2, h4 {
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+  }
+
+  #img-wrap {
+    margin: auto;
+    width: 690px;
+    height: 200px;
+  }
+
+  img {
+
+  }
+
+  form {
+    padding-top: 20px;
+    margin: auto;
+    font-weight: 500;
+  }
+
+  input {
+    font-family : inherit;
+    font-size   : 100%;
+    border: 1px dotted #999;
+    border-radius: 1;
+    padding: 3px;
+    margin-left: 5px;
+  -webkit-appearance: none;
+}
+
+  input[type=submit] {
+    background: #91e842;
+
+  }
+
+</style>
+  <title>Interrobang Man</title>
+  <body>
+    <div id="page-wrap">
+      <h2>Welcome to Interrobang Man</h2>
+      <h4>The word guessing game!</h4>
+      <h3>Guesses: <%= guesses %></h3>
+      <div id="img-wrap">
+        <img src="./image/<%= image_number %>.png">
+      </div>
+      <h2>WORD: <%= word %></h2>
+      <h3>Guess a letter:
+        <form>
+          <input type='text' name='guess' />
+          <input type='submit' value='Guess!' />
+        </form></h3>
+      <h4>Missed Letters: <%= guessed_characters %> </h4>
+      <a href="<%= url("/")%>" class="btn btn-primary">Restart</a>
+  </div>
+    </body>
+</html>
